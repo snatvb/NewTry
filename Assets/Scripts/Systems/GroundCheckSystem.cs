@@ -38,9 +38,9 @@ namespace Systems {
         case SphereCollider sphereCollider:
           return sphereCollider.radius;
         default:
-          float x = Math.Abs(collider.bounds.center.x - collider.bounds.extents.x) * 2;
-          float y = Math.Abs(collider.bounds.center.y - collider.bounds.extents.y) * 2;
-          float z = Math.Abs(collider.bounds.center.z - collider.bounds.extents.z) * 2;
+          float x = collider.bounds.extents.x * 2;
+          float y = collider.bounds.extents.y * 2;
+          float z = collider.bounds.extents.z * 2;
           return (x + y + z) / 3;
       }
     }
