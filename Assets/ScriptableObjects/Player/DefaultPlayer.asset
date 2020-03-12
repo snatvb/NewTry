@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a5082878e93c8428960d2e439f7021, type: 3}
+  m_Name: DefaultPlayer
+  m_EditorClassIdentifier: 
+  spawnPosition: {x: -19.52, y: 0.99, z: -0.09}
+  spawnRotation: {x: 0, y: 90, z: 0, w: 90}
+  prefab: {fileID: 8331095937447457973, guid: 791aa3e043e5a2b488e223a9de681c94, type: 3}
+  MaxSpeed: 8
+  Acceleration: 100
+  JumpForce: 16
+  cameraOffset: {x: 0, y: 3, z: -10}
+  cameraSmooth: 0.3
