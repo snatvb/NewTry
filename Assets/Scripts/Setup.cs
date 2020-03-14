@@ -3,6 +3,9 @@ using Animation;
 using Camera;
 using EcsCollisionHandler;
 using Enemy;
+using Enemy.Systems;
+using Guns.Components;
+using Guns.Systems;
 using Leopotam.Ecs;
 using Leopotam.Ecs.Ui.Systems;
 using Player.Systems;
@@ -24,7 +27,10 @@ public class Setup : MonoBehaviour {
     world = new EcsWorld();
     systems = new EcsSystems(world);
     fixedSystems = new EcsSystems(world);
-
+    
+    #if DEBUG
+    new Leopotam.Ecs.RemoteDebug.RemoteDebugClient(world);
+    #endif
     #if UNITY_EDITOR
     Leopotam.Ecs.UnityIntegration.EcsWorldObserver.Create(world);
     Leopotam.Ecs.UnityIntegration.EcsSystemsObserver.Create(systems);
@@ -34,9 +40,11 @@ public class Setup : MonoBehaviour {
 
 
     fixedSystems
+     .RegisterCollisionEmitter()
      .Add(new PlayerRunSystem())
      .Add(new FixRampPositionSystem())
      .Add(new GroundCheckSystem(groundLayer))
+     .Add(new EnemyShootSystem())
      .Init();
 
     systems
@@ -47,10 +55,11 @@ public class Setup : MonoBehaviour {
      .Add(new PlayerInputSystem())
      .Add(new PlayerJumpSystem())
      .Add(new AnimationMoveSystem())
+     .Add(new PlasmaShotSystem())
+     .OneFrame<PlasmaShotComponent>()
       #if UNITY_EDITOR
      .Add(new LogCollisionsSystems())
       #endif
-     .RegisterCollisionEmitter()
      .Init();
   }
 

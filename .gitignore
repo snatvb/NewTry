@@ -65,3 +65,6 @@ sysinfo.txt
 crashlytics-build.properties
 
 /Packages/
+
+# Binary
+*.fbx

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Components;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Player Data", menuName = "Player/Create Data Script")]
@@ -12,4 +13,5 @@ public class PlayerInitData : ScriptableObject {
   public float JumpForce;
   public Vector3 cameraOffset;
   public float cameraSmooth;
+  public StatsComponent Stats;
 }

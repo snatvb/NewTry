@@ -20,3 +20,6 @@ MonoBehaviour:
   JumpForce: 16
   cameraOffset: {x: 0, y: 3, z: -10}
   cameraSmooth: 0.3
+  Stats:
+    Health: 100
+    MaxHealth: 100

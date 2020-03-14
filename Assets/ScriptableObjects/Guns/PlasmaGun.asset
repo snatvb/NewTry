@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb263ba737e464bab9ea2c634e4d51c, type: 3}
+  m_Name: PlasmaGun
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 1073267758972505747, guid: 5ba68efa09ab8074e9067e0c489f8f85, type: 3}
+  Projectile: {fileID: 4644759182129423616, guid: 63def3ac8f0dfb9488283df3a03e5e5f,
+    type: 3}
+  Flash: {fileID: 0}
+  Damage: 30
+  FireRate: 1
+  ChargingTime: 0.3

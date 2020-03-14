@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb53effc79ed73478fc867aad33fed2, type: 3}
+  m_Name: DefaultEnemy
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 877360089371357230, guid: bbc93dd7be3c85a4abad3a1d06f7986d, type: 3}
+  EnemySpawns:
+  - Position: {x: -13.57381, y: 0.5, z: 0}
+    Rotation: {x: 0, y: -90, z: 0, w: 90}
+    RadiusDetection: 3
+    MaxSpeed: 8
+    Acceleration: 100
+    Stats:
+      Health: 100
+      MaxHealth: 100
+    Gun:
+      Config: {fileID: 11400000, guid: e637f89c2dd53994fac8151db77fdc16, type: 2}
+      Position: {x: -0.088, y: 0.209, z: 0.044}
+      Rotation: {x: 156.384, y: 41.418, z: 92.39799}
