@@ -1,5 +1,4 @@
-﻿using System;
-using Components;
+﻿using Components;
 using Leopotam.Ecs;
 using Move;
 using UnityEngine;
@@ -43,10 +42,6 @@ namespace Systems {
           float z = collider.bounds.extents.z * 2;
           return (x + y + z) / 3;
       }
-    }
-
-    public void OnDrawGizmozSelected() {
-      Debug.Log("Called");
     }
   }
 }

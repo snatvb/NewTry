@@ -6,5 +6,6 @@ namespace Move {
     public float JumpForce;
     public bool IsJump;
     public bool IsGround;
+    public bool IsFixXPosition;
   }
 }

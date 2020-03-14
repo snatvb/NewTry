@@ -1,8 +1,8 @@
-﻿using System;
-using Systems;
+﻿using Systems;
 using Animation;
 using Camera;
 using EcsCollisionHandler;
+using Enemy;
 using Leopotam.Ecs;
 using Leopotam.Ecs.Ui.Systems;
 using Player.Systems;
@@ -18,6 +18,7 @@ public class Setup : MonoBehaviour {
   [SerializeField] private EcsUiEmitter uiEmitter;
   [SerializeField] private LayerMask groundLayer = 8;
   [SerializeField] private PlayerInitData playerInitData;
+  [SerializeField] private EnemyInitData enemyInitData;
 
   private void Initialize() {
     world = new EcsWorld();
@@ -42,6 +43,7 @@ public class Setup : MonoBehaviour {
      .Add(new CameraMoveSystem())
      .Add(new CameraFollowSystem())
      .Add(new PlayerSpawnSystem(playerInitData))
+     .Add(new EnemySpawnSystem(enemyInitData))
      .Add(new PlayerInputSystem())
      .Add(new PlayerJumpSystem())
      .Add(new AnimationMoveSystem())
