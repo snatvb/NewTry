@@ -67,4 +67,5 @@ crashlytics-build.properties
 /Packages/
 
 # Binary
+Assets/Models/
 *.fbx
